@@ -19,20 +19,24 @@ Each filter is wrapped around the `Image` object and enhances the `display()` ac
 
 #### UML Diagram
 Decorator UML
-        <<interface>>
-        Image
-           ^
-           |
-      BasicImage
-           ^
-           |
-   -------------------------
-   |       ImageFilterDecorator (abstract)
-   |                ^
-   |                |
-   |     -------------------------
-   |     |                       |
-GrayscaleFilter           SepiaFilter
+<<interface>>
+Image
+^
+|
+BasicImage
+^
+|
+-------------------------
+|  ImageFilterDecorator  | <<abstract>>
+|-----------------------|
+| - image: Image         |
+|-----------------------|
+| + display()            |
+-------------------------
+^             ^
+|             |
+GrayscaleFilter   SepiaFilter
++ display()       + display()
 
 Factory Method UML
         FilterFactory
