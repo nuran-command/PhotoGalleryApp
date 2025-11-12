@@ -7,6 +7,7 @@ import java.util.List;
 public class AppManager {
     private static AppManager instance;
     private List<Image> images;
+    private String addImageMessage = "Image added to AppManager.";
 
     private AppManager() {
         images = new ArrayList<>();
@@ -21,7 +22,7 @@ public class AppManager {
 
     public void addImage(Image image) {
         images.add(image);
-        System.out.println("Image added to AppManager.");
+        System.out.println(addImageMessage);
     }
 
     public List<Image> getImages() {

@@ -4,6 +4,8 @@ import com.project.filters.base.Image;
 
 public class GrayscaleFilter extends ImageFilterDecorator {
 
+    private String filterMessage = "Applying Grayscale Filter";
+
     public GrayscaleFilter(Image image) {
         super(image);
     }
@@ -11,6 +13,6 @@ public class GrayscaleFilter extends ImageFilterDecorator {
     @Override
     public void display() {
         super.display();
-        System.out.println("Applying Grayscale Filter");
+        System.out.println(filterMessage);
     }
 }

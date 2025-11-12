@@ -4,6 +4,8 @@ import com.project.camera.*;
 
 public class CameraFacade {
     private Camera camera;
+    private String photoProcessMessage = "Facade: Photo process simplified.";
+    private String videoProcessMessage = "Facade: Video process simplified.";
 
     public CameraFacade() {
         this.camera = new BasicCamera();
@@ -11,11 +13,11 @@ public class CameraFacade {
 
     public void takePhoto() {
         camera.capturePhoto();
-        System.out.println("Facade: Photo process simplified.");
+        System.out.println(photoProcessMessage);
     }
 
     public void recordMovie() {
         camera.recordVideo();
-        System.out.println("Facade: Video process simplified.");
+        System.out.println(videoProcessMessage);
     }
 }
