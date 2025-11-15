@@ -1,10 +1,10 @@
 package com.project.filters.decorator;
 
-import com.project.filters.base.Image;
+import com.project.filters.base.DisplayableImage;
 
 public class SepiaFilter extends ImageFilterDecorator {
 
-    public SepiaFilter(Image image) {
+    public SepiaFilter(DisplayableImage image) {
         super(image);
     }
 

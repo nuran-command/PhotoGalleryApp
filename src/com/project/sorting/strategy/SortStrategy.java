@@ -1,8 +1,8 @@
 package com.project.sorting.strategy;
 
-import com.project.gallery.Image;
+import com.project.gallery.GalleryImage;
 import java.util.List;
 
 public interface SortStrategy {
-    void sort(List<Image> images);
+    void sort(List<GalleryImage> images);
 }

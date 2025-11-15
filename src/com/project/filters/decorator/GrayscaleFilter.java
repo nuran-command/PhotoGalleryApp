@@ -1,10 +1,10 @@
 package com.project.filters.decorator;
 
-import com.project.filters.base.Image;
+import com.project.filters.base.DisplayableImage;
 
 public class GrayscaleFilter extends ImageFilterDecorator {
 
-    public GrayscaleFilter(Image image) {
+    public GrayscaleFilter(DisplayableImage image) {
         super(image);
     }
 

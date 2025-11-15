@@ -1,30 +1,26 @@
 package com.project.manager;
 
-import com.project.gallery.Image;
+import com.project.gallery.GalleryImage;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class AppManager {
-    private static AppManager instance;
-    private List<Image> images;
+public class AppManager implements ImageRepository {
+    private static final AppManager INSTANCE = new AppManager();
+    private final List<GalleryImage> images = new ArrayList<>();
 
-    private AppManager() {
-        images = new ArrayList<>();
-    }
+    private AppManager() {}
 
-    public static AppManager getInstance() {
-        if (instance == null) {
-            instance = new AppManager();
-        }
-        return instance;
-    }
+    public static AppManager getInstance() { return INSTANCE; }
 
-    public void addImage(Image image) {
+    @Override
+    public void addImage(GalleryImage image) {
         images.add(image);
-        System.out.println("Image added to AppManager.");
+        System.out.println("AppManager: Image added to repository.");
     }
 
-    public List<Image> getImages() {
-        return images;
+    @Override
+    public List<GalleryImage> getImages() {
+        return Collections.unmodifiableList(images);
     }
 }

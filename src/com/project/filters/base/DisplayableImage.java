@@ -1,5 +1,5 @@
 package com.project.filters.base;
 
-public interface Image {
+public interface DisplayableImage {
     void display();
 }

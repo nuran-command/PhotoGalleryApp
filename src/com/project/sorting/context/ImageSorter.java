@@ -2,7 +2,7 @@ package com.project.sorting.context;
 
 import com.project.sorting.strategy.*;
 
-import com.project.gallery.Image;
+import com.project.gallery.GalleryImage;
 import java.util.List;
 
 public class ImageSorter {
@@ -12,7 +12,7 @@ public class ImageSorter {
         this.strategy = strategy;
     }
 
-    public void sortImages(List<Image> images) {
-        strategy.sort(images);
+    public void sortImages(List<GalleryImage> galleryImages) {
+        strategy.sort(galleryImages);
     }
 }
